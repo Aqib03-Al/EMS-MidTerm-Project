@@ -1,0 +1,79 @@
+<%- include('partials/header', { title: title }) %>
+
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+  <div>
+    <h1 class="h3 mb-1">Department Management</h1>
+    <p class="text-muted mb-0">Create and maintain company departments from one place.</p>
+  </div>
+</div>
+
+<% if (alert && alert.text) { %>
+  <div class="alert alert-<%= alert.type %> alert-dismissible fade show" role="alert">
+    <%= alert.text %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %>
+
+<div class="row g-4">
+  <div class="col-lg-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="h5 mb-3">Add Department</h2>
+        <form action="/departments" method="POST" class="row g-3">
+          <div class="col-12">
+            <label class="form-label" for="name">Department Name</label>
+            <input type="text" class="form-control" id="name" name="name" required />
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+          </div>
+          <div class="col-12 d-grid">
+            <button type="submit" class="btn btn-primary">Create Department</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-8">
+    <div class="row g-3">
+      <% if (departments.length === 0) { %>
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-body text-center text-muted py-4">
+              No departments found. Create your first department.
+            </div>
+          </div>
+        </div>
+      <% } %>
+
+      <% departments.forEach(function(dep) { %>
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <form action="/departments/<%= dep._id %>?_method=PUT" method="POST" class="row g-2">
+                <div class="col-12">
+                  <label class="form-label small">Department Name</label>
+                  <input type="text" class="form-control form-control-sm" name="name" value="<%= dep.name %>" required />
+                </div>
+                <div class="col-12">
+                  <label class="form-label small">Description</label>
+                  <textarea class="form-control form-control-sm" name="description" rows="2"><%= dep.description || '' %></textarea>
+                </div>
+                <div class="col-12 d-flex gap-2 pt-1">
+                  <button class="btn btn-sm btn-outline-primary" type="submit">Save</button>
+                </div>
+              </form>
+              <form class="pt-2" action="/departments/<%= dep._id %>?_method=DELETE" method="POST" onsubmit="return confirm('Delete this department?');">
+                <button class="btn btn-sm btn-outline-danger" type="submit">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

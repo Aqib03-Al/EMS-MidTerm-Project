@@ -1,0 +1,18 @@
+<%- include('partials/header', { title: title || 'Error' }) %>
+
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="card border-danger shadow-sm">
+      <div class="card-body">
+        <h1 class="h3 text-danger mb-2">Error <%= status || (error && error.status) || 500 %></h1>
+        <p class="mb-3"><%= message %></p>
+        <% if (error && error.stack) { %>
+          <pre class="bg-light p-3 rounded"><%= error.stack %></pre>
+        <% } %>
+        <a href="/" class="btn btn-primary">Back to Dashboard</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

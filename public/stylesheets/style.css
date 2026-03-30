@@ -1,0 +1,94 @@
+:root {
+  --app-bg: #f3f6fd;
+  --ink: #12325b;
+  --indigo: #4b57f5;
+  --blue: #246bfd;
+  --cyan: #12b8d5;
+}
+
+.app-body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #eef3ff 0%, #f8fbff 100%);
+  color: #1f2d3d;
+}
+
+.app-navbar {
+  background: linear-gradient(90deg, #1a3f74 0%, #1f4e8e 50%, #2a5ea3 100%);
+}
+
+.navbar-brand {
+  letter-spacing: 0.4px;
+}
+
+.card {
+  border: none;
+  border-radius: 14px;
+}
+
+.hero-panel {
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: linear-gradient(120deg, #243b8e 0%, #374dd6 55%, #2f7fe7 100%);
+}
+
+.landing-hero {
+  background: linear-gradient(130deg, #122950 0%, #1a3f74 42%, #246bfd 100%);
+}
+
+.info-hero {
+  background: linear-gradient(120deg, #1b3564 0%, #284d8e 48%, #2f7fe7 100%);
+}
+
+.glass-card {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(4px);
+}
+
+.stat-card {
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(21, 42, 77, 0.16);
+}
+
+.stat-card-indigo {
+  background: linear-gradient(120deg, var(--indigo), #6b5ef9);
+}
+
+.stat-card-blue {
+  background: linear-gradient(120deg, var(--blue), #4c90ff);
+}
+
+.stat-card-cyan {
+  background: linear-gradient(120deg, var(--cyan), #35d4eb);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  opacity: 0.88;
+}
+
+.stat-value {
+  font-weight: 700;
+}
+
+.app-footer {
+  background: linear-gradient(90deg, #10284d 0%, #123460 45%, #1a4b84 100%);
+  color: #ffffff;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.2);
+}

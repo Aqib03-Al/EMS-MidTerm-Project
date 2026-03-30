@@ -1,0 +1,45 @@
+<%- include('partials/header', { title: title }) %>
+
+<section class="info-hero rounded-4 p-4 p-md-5 mb-4">
+  <h1 class="display-6 fw-bold text-white mb-2">System Policy</h1>
+  <p class="text-white-50 mb-0">
+    These policies define data handling, platform usage, and governance standards for EMS operations.
+  </p>
+</section>
+
+<section class="row g-3">
+  <div class="col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h2 class="h5">Access Control Policy</h2>
+        <p class="text-muted mb-0">Only authorized admin users may log in and perform create, update, or delete actions.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h2 class="h5">Data Accuracy Policy</h2>
+        <p class="text-muted mb-0">All employee records must use valid email formats and positive salary values as enforced by schema validation.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h2 class="h5">Security Policy</h2>
+        <p class="text-muted mb-0">Passwords are hashed and sessions are protected to prevent unauthorized account misuse.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h2 class="h5">Operational Policy</h2>
+        <p class="text-muted mb-0">Changes to departments and employees should be reviewed carefully for organizational consistency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

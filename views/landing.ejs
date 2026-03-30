@@ -1,0 +1,58 @@
+<%- include('partials/header', { title: title }) %>
+
+<section class="landing-hero rounded-4 p-4 p-md-5 mb-4">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-7">
+      <p class="text-uppercase fw-semibold small text-white-50 mb-2">CSC337 Mid-Term Project</p>
+      <h1 class="display-6 fw-bold text-white mb-3">Professional Employee Management Platform</h1>
+      <p class="text-white-50 mb-4">
+        Manage employees, departments, and operations from a secure admin-only dashboard built with Node.js, Express, MongoDB, and Bootstrap.
+      </p>
+      <div class="d-flex flex-wrap gap-2">
+        <a href="/auth/login" class="btn btn-light btn-lg px-4">Admin Login</a>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="glass-card p-4">
+        <h2 class="h5 text-white mb-3">System Snapshot</h2>
+        <div class="d-flex justify-content-between border-bottom border-light-subtle pb-2 mb-2">
+          <span class="text-white-50">Employees</span>
+          <strong class="text-white"><%= totalEmployees %></strong>
+        </div>
+        <div class="d-flex justify-content-between">
+          <span class="text-white-50">Departments</span>
+          <strong class="text-white"><%= totalDepartments %></strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="row g-3 mb-4">
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h3 class="h6">Role-Based Security</h3>
+        <p class="text-muted mb-0">Only admin users can access and operate this system.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h3 class="h6">Department Management</h3>
+        <p class="text-muted mb-0">Create and manage departments for cleaner organization structure.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h3 class="h6">Search and Filters</h3>
+        <p class="text-muted mb-0">Quickly filter records by employee name and specific department.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
